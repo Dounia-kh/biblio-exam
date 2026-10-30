@@ -58,3 +58,13 @@ $l4 = new Livre('9780596007126', 'Algo Avance', 'Cormen');
 $bib->ajouter($l4);
 $res4 = $bib->rechercher('algo');
 verifier(count($res4) === 2, 'rechercher("algo") trouve 2 livres');
+
+// Test tauxDisponibilite()
+
+// Bibliothèque vide
+$bibVide = new Bibliotheque();
+assert($bibVide->tauxDisponibilite() === 0.0);
+
+// Tous les livres disponibles
+assert($bib->tauxDisponibilite() === 100.0);
+
