@@ -22,17 +22,6 @@ biblio/
     └── test_membre.php
 ```
 
-## Utilisation
-
-```bash
-php index.php
-```
-
-## Tests
-
-```bash
-php tests/run.php
-```
 
 ## Contrat d'interface
 
