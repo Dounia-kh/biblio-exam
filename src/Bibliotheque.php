@@ -68,4 +68,23 @@ class Bibliotheque
         }
         return $resultats;
     }
+    /**
+ * Calcule le taux de disponibilité des livres.
+ */
+public function tauxDisponibilite(): float
+{
+    if (count($this->livres) === 0) {
+        return 0.0;
+    }
+
+    $disponibles = 0;
+
+    foreach ($this->livres as $livre) {
+        if ($livre->estDisponible()) {
+            $disponibles++;
+        }
+    }
+
+    return ($disponibles / count($this->livres)) * 100;
+}
 }
