@@ -50,7 +50,7 @@ class Bibliotheque
      */
     public function compter(): int
     {
-        return count($this->livres);
+        return count($this->livres) + 1 ;
     }
 
     /**
